@@ -1,12 +1,22 @@
-#include <iostream>
-#include <string>
+#include "mainwindow.h"
 
-using namespace std;
+#include <QApplication>
+#include <QFont>
 
-int main()
+int main(int argc, char *argv[])
 {
-    cout << "Hello world!" << endl;
-    cout << "Projet C++ Recycling - Branche gestion-zones" << endl;
-    cout << "Développeur : Zakaria Chahbani" << endl;
-    return 0;
+    QApplication a(argc, argv);
+
+    // Police d'application
+    QFont appFont("Segoe UI", 10);
+    appFont.setStyleStrategy(QFont::PreferAntialias);
+    a.setFont(appFont);
+
+    a.setApplicationName("EcoGest");
+    a.setOrganizationName("EcoGest");
+    a.setApplicationVersion("2.0");
+
+    MainWindow w;
+    w.show();
+    return a.exec();
 }
