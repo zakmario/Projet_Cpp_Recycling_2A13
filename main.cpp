@@ -1,12 +1,10 @@
-#include <iostream>
-#include <string>
+#include "mainwindow.h"
+#include <QApplication>
 
-using namespace std;
-
-int main()
+int main(int argc, char *argv[])
 {
-    cout << "Hello world!" << endl;
-    cout << "Projet C++ Recycling - Branche gestion-zones" << endl;
-    cout << "Développeur : Zakaria Chahbani" << endl;
-    return 0;
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
 }
